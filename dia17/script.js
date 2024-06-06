@@ -1,75 +1,39 @@
-// PRECEDÊNCIA DOS OPERADORES
+//Truthy e Falsy
 
-//SWITCH e CASE (SE PARECE O IF E ELSE)
-//IDEAL PARA VÁRIAS COMPARAÇÕES AO MESMO TEMPO
+// Operador Ternário
 
-// Switch e Case com números
-// Dia 1 é domigo
-let dia = 7
+let idade = 19
 
-switch (dia) {
-    case 1:
-        console.log('Domingo')
-        break
-    case 2:
-        console.log('Segunda')
-        break
-    case 3:
-        console.log('Terça')
-        break
-    case 4:
-        console.log('Quarta')
-        break
-    case 5:
-        console.log('Quinta')
-        break
-    case 6:
-        console.log('Sexta')
-        break
-    case 7:
-        console.log('Sábado')
-        break
-    default:
-        console.log('Número inválido')
+if (idade < 18){
+    console.log('Menor de idade')
+} else{
+    console.log('Maior de idade')
 }
 
+let idade1= 20
+let resultado = idade1 < 18 ? 'Menor' : 'Maior'
+console.log(resultado)
+// ? - If
+// : - Else
 
-//Switch e Case com Strings
+let idade2 = 17
+idade2 < 18 ? console.log('Menor') : console.log('Maior')
 
-let userLevel = 'admin' //admin, editor, guest
+//DESAFIO: CONVERTER O CÓDIGO ABAIXO EM OPERADOR TERNÁRIO
 
-switch (userLevel){
-    case 'admin':
-        console.log('Full access')
-        break
-    case 'editor':
-        console.log('Editor Level')
-        break
-    case 'guest':
-        console.log('Limited access')
-        break
-    default:
-        console.log('Enknown User')
+let nota = 40
+let avaliacao
+
+/*if (nota >= 90){
+    avaliacao = 'Excelente'
+} else if (nota >= 70) {
+    avaliacao = 'Bom'
+} else if (nota >= 50) {
+    avaliacao = 'Satisfatório'
+} else {
+    avaliacao = 'Isatisfatório'
 }
 
-//DESAFIO
-/*Criar uma solução com o "Switch" que retorne:
-hora < 12: Bom dia
-hora < 18: Boa tarde
-hora >= 18: Boa noite
-A hora é local
-*/
+console.log(avaliacao)*/
 
-let dataAtual = new Date()
-let horaAtual = dataAtual.getHours()
-
-switch(true){
-    case horaAtual < 12:
-        console.log('Bom dia')
-        break
-    case horaAtual < 18:
-        console.log('Boa tarde')
-        break
-    default:
-        console.log('Boa noite')
-}
+nota >= 90 ? console.log('Excelente') : nota >= 70 ? console.log('Bom') : nota >=50 ? console.log('Satisfatório') : console.log('Insatisfatório')
